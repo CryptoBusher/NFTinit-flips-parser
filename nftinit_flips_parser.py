@@ -69,7 +69,7 @@ def process_flips_data(flips_data: list):
 
         rank_percent = None
         if "rank" in flip and 'supply' in flip:
-            if isinstance(flip["rank"], int) and isinstance(flip["supply"], int):
+            if isinstance(flip["rank"], int) and isinstance(flip["supply"], int) and flip["supply"] > 0:
                 rank_percent = floor((flip["rank"] / flip["supply"] * 100))
 
         processed_data.append({
